@@ -1,6 +1,7 @@
 import numpy as np
 from WaveSolver2D import WaveSolver2D
 import matplotlib.pyplot as plt
+import os
 
 b = 0
 Nx = 50
@@ -38,6 +39,8 @@ solver = WaveSolver2D(b, Nx, Ny, Lx, Ly, T)
 solver.Initialize(I, V, q, f)
 solver.FirstTimeStep()
 solver.AdvanceTime()
+
+os.system("python3 animate.py")
 
 
 X, Y = np.meshgrid(solver.x, solver.y)
