@@ -19,9 +19,14 @@ print(X)
 
 
 def u(x):
+    """
     psi0 = (x-1+h)*(x-1)/(2*h*h)
     psi1 = -(x-1+2*h)*(x-1)/(h*h)
     psi2 = (x-1+2*h)*(x-1+2*h)/(2*h*h)
+    """
+    psi0 = (x-h)*(x-2*h)/(2*h*h)
+    psi1 = -x*(x-2*h)/(h*h)
+    psi2 = x*(x-h)/(2*h*h)
     return X[0]*psi0 + X[1]*psi1 + X[2]*psi2
 
 
