@@ -25,6 +25,7 @@ def q(x,y, H0 = 10):
 def B(x, y, B0=0, Ba=1, Bmx=0.5, Bmy=0.5, Bs=0.1, b=1):
     return B0 + Ba*np.exp(-((x-Bmx)/Bs)**2-((y-Bmy)/(b*Bs))**2)
 """
+
 def B(x, y, B0=0, Ba=1, Bmx=0.5, Bmy=0.5, Bs=2, b=1):
     return B0 + Ba*np.cos(np.pi*(x-Bmx/(2*Bs)))*np.cos(np.pi*(y-Bmy/(2*Bs)))
 
